@@ -1,0 +1,33 @@
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-12px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutToTop {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-12px);
+        opacity: 0;
+    }
+}
+
+.slide-in-top {
+    animation-name: slideInFromTop;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.slide-out-top {
+    animation-name: slideOutToTop;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}

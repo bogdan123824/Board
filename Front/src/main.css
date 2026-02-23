@@ -1,0 +1,94 @@
+p {
+    margin: 0;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #101211;
+}
+
+.btn {
+    background-color: #D9A441;
+    border: none;
+    color: #0D0D0D;
+    height: 41.33px;
+    font-weight: 600;
+    background: linear-gradient(to bottom,
+            #d9a441 0%,
+            #c6a974 50%,
+            #cc8d18 100%);
+    box-shadow:
+        inset 2px 2px 5px #c78200,
+        inset -2px -2px 5px #ad7307;
+    transition: filter 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: #1a1a1a !important;
+    border-color: #D9A441 !important;
+    box-shadow: 0 0 0 0.2rem rgba(217, 164, 65, 0.25) !important;
+    color: white !important;
+}
+
+.form-control::placeholder {
+    color: #888 !important;
+    opacity: 1 !important;
+}
+
+.btn:hover {
+    filter: brightness(90%);
+    cursor: pointer;
+    color: #0D0D0D
+}
+
+.hexagon {
+    /* height = width * sqrt(3)/2 */
+    clip-path: polygon(50% 0%,
+            93.3% 25%,
+            93.3% 75%,
+            50% 100%,
+            6.7% 75%,
+            6.7% 25%);
+}
+
+.carousel-indicators>button {
+    background: #D9A441;
+    width: 40px !important;
+    height: 20px !important;
+    opacity: 1 !important;
+    clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.carousel-indicators>button.active {
+    background: #D9D9D9;
+}
+
+.carousel-indicators>button:not(.active) {
+    background: #898989;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    clip-path: none;
+    opacity: 1;
+}
+
+.carousel-control-prev {
+    left: -20px;
+}

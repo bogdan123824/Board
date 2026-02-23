@@ -1,0 +1,357 @@
+.my-notices-container {
+    width: 100%;
+}
+
+.notices-header {
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    margin-bottom: 28px;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.notices-title {
+    padding-right: 14px;
+    color: white;
+    font-size: 120%;
+    text-transform: uppercase;
+    white-space: nowrap;
+    align-self: flex-start;
+}
+
+.tabs-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tabs {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.tab {
+    color: #525252;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+    padding: 0 6px 2px 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.tab.active {
+    color: #D9A441;
+}
+
+.tab-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #E9E9E9;
+    transition: all 0.3s ease-in-out;
+}
+
+.tab-line {
+    height: 1px;
+    background-color: #525252;
+    width: 100%;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.no-notices {
+    margin-top: 28px;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.notices-list {
+    width: 100%;
+}
+
+.notice-item {
+    margin-bottom: 28px;
+}
+
+.notice-card {
+    background-color: #0D0D0D;
+    color: white;
+    width: 100%;
+    display: flex;
+    min-height: 240px;
+    transition: background-color 0.2s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.notice-card.closed {
+    cursor: default;
+}
+
+.notice-card:not(.closed):hover {
+    background-color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+.notice-image {
+    object-fit: cover;
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.notice-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 28px;
+}
+
+.notice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    gap: 16px;
+}
+
+.notice-info {
+    flex: 1;
+}
+
+.notice-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.closed-notice {
+    margin-bottom: 12px;
+    color: #D9A441;
+    font-weight: bold;
+}
+
+.closed-text {
+    font-weight: normal;
+}
+
+.notice-caption {
+    margin-bottom: 8px;
+    font-weight: lighter;
+    font-size: 90%;
+    color: #d7d7d7;
+    line-height: 1.4;
+}
+
+.notice-price {
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 6px 18px;
+    border-radius: 6px;
+    background: linear-gradient(to bottom, #d9a441 0%, #c6a974 50%, #cc8d18 100%);
+    color: #0D0D0D;
+    box-shadow: inset 2px 2px 5px #c78200, inset -2px -2px 5px #ad7307;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 41.32px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.notice-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 80%;
+    color: #a6a6a6;
+    padding-right: 50px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 440px;
+    gap: 16px;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pagination-arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s;
+}
+
+.pagination-arrow:disabled {
+    cursor: default;
+}
+
+.arrow-left {
+    transform: scaleX(-1);
+}
+
+@media (max-width: 768px) {
+    .notices-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 24px;
+    }
+
+    .tabs {
+        gap: 12px;
+        width: 100%;
+    }
+
+    .tab {
+        font-size: 14px;
+    }
+
+    .notice-card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .notice-image {
+        width: 100%;
+    }
+
+    .notice-content {
+        padding: 20px;
+    }
+
+    .notice-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .notice-price {
+        align-self: flex-start;
+    }
+
+    .notice-footer {
+        flex-direction: column;
+        gap: 8px;
+        padding-right: 0;
+        margin-top: 16px;
+    }
+
+    .card-corner {
+        display: none;
+    }
+
+    .pagination-controls {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .page-numbers {
+        order: 2;
+    }
+
+    .pagination-arrow {
+        order: 1;
+    }
+
+    .pagination-arrow:last-child {
+        order: 3;
+    }
+}
+
+@media (max-width: 480px) {
+    .notices-title {
+        font-size: 110%;
+    }
+
+    .tab {
+        font-size: 12px;
+        padding: 0 4px 2px 4px;
+    }
+
+    .notice-content {
+        padding: 16px;
+    }
+
+    .notice-title {
+        font-size: 16px;
+    }
+
+    .notice-caption {
+        font-size: 14px;
+    }
+
+    .notice-price {
+        font-size: 16px;
+        padding: 6px 12px;
+        height: 36px;
+    }
+
+    .pagination-controls {
+        gap: 12px;
+    }
+
+    .page-numbers {
+        gap: 6px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .notice-footer {
+        padding-right: 30px;
+    }
+}
+
+@media (min-width: 769px) {
+    .notices-header {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .notices-title {
+        align-self: auto;
+    }
+
+    .tabs-container {
+        flex: 1;
+    }
+
+    .tabs {
+        justify-content: flex-start;
+        overflow-x: visible;
+    }
+}

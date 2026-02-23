@@ -1,0 +1,496 @@
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin-top: 28px;
+}
+
+.main-page-form-row {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    color: white;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    height: 45.33px;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #D9A441;
+    box-shadow: 0 0 0 2px rgba(217, 164, 65, 0.2);
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: #888;
+}
+
+.price-group {
+    width: 120px;
+    flex: initial;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.button-group {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 12px;
+    flex: 1;
+}
+
+.main-page-price-form {
+    display: flex;
+    gap: 16px;
+}
+
+.search-button,
+.create-button {
+    height: 45.33px;
+    padding: 0 18px;
+    border-radius: 4px;
+    background: linear-gradient(to bottom, #d9a441 0%, #c6a974 50%, #cc8d18 100%);
+    border: none;
+    box-shadow: inset 2px 2px 5px #c78200, inset -2px -2px 5px #ad7307;
+    color: #0D0D0D;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    min-width: 41px;
+}
+
+.search-button:hover,
+.create-button:hover {
+    transform: translateY(-1px);
+    box-shadow: inset 2px 2px 5px #c78200,
+        inset -2px -2px 5px #ad7307,
+        0 4px 8px rgba(217, 164, 65, 0.3);
+}
+
+.create-button {
+    white-space: nowrap;
+    height: 45.33px;
+}
+
+.results-count {
+    color: #D9A441;
+    width: 100%;
+    margin: 28px 0;
+    font-weight: 600;
+}
+
+.notices-header {
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.notices-title {
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin: 0;
+    font-weight: bold;
+}
+
+.tabs-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.tabs {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.tab {
+    color: #525252;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+    padding: 0 6px 4px 6px;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.tab.active {
+    color: #D9A441;
+}
+
+.tab-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #D9A441;
+    transition: all 0.3s ease-in-out;
+}
+
+.tab-line {
+    height: 1px;
+    background-color: #525252;
+    width: 100%;
+    margin-top: -1px;
+}
+
+.notices-container {
+    width: 100%;
+    color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.no-notices {
+    margin-top: 28px;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.notices-list {
+    width: 100%;
+}
+
+.notice-card {
+    margin-bottom: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.notice-card:hover {
+    transform: translateY(-2px);
+}
+
+.card-content {
+    background-color: #0D0D0D;
+    color: white;
+    width: 100%;
+    display: flex;
+    min-height: 200px;
+    transition: background-color 0.2s;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-content:hover {
+    background-color: #1a1a1a;
+}
+
+.notice-image {
+    object-fit: cover;
+    width: 280px;
+    height: 240px;
+    flex-shrink: 0;
+}
+
+.notice-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.notice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    gap: 16px;
+}
+
+.notice-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.notice-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.notice-caption {
+    margin-bottom: 8px;
+    font-weight: 300;
+    font-size: 14px;
+    color: #d7d7d7;
+    line-height: 1.4;
+}
+
+.notice-price {
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: linear-gradient(to bottom, #d9a441 0%, #c6a974 50%, #cc8d18 100%);
+    color: #0D0D0D;
+    box-shadow: inset 2px 2px 5px #c78200, inset -2px -2px 5px #ad7307;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    height: 40px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.notice-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #a6a6a6;
+    padding-right: 20px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 500px;
+    flex-wrap: wrap;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pagination-arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s;
+    color: #D9A441;
+}
+
+.pagination-arrow:disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+
+.pagination-arrow:hover:not(:disabled) {
+    opacity: 0.8;
+}
+
+.arrow-left {
+    transform: scaleX(-1);
+}
+
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .create-button {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-form {
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    .price-group {
+        width: 100%;
+    }
+
+    .button-group {
+        justify-content: center;
+        margin-top: 8px;
+    }
+
+    .notices-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .tabs-container {
+        width: 100%;
+    }
+
+    .tabs {
+        gap: 16px;
+    }
+
+    .tab {
+        font-size: 14px;
+    }
+
+    .card-content {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .notice-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .notice-details {
+        padding: 16px;
+    }
+
+    .notice-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .notice-price {
+        align-self: flex-start;
+    }
+
+    .notice-footer {
+        flex-direction: column;
+        gap: 8px;
+        padding-right: 0;
+        margin-top: 12px;
+    }
+
+    .pagination-controls {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .react-select-container .react-select__control {
+        min-height: 45.33px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-page-form-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .form-control {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .search-button {
+        padding: 0 16px;
+        font-size: 14px;
+    }
+
+    .results-count {
+        margin: 20px 0;
+        font-size: 14px;
+    }
+
+    .notices-title {
+        font-size: 20px;
+    }
+
+    .notice-title {
+        font-size: 16px;
+    }
+
+    .notice-caption {
+        font-size: 13px;
+    }
+
+    .notice-price {
+        font-size: 16px;
+        padding: 6px 12px;
+        height: 36px;
+    }
+
+    .pagination-arrow svg {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+    .notice-image {
+        width: 240px;
+    }
+
+    .notice-footer {
+        padding-right: 40px;
+    }
+}
+
+@media (min-width: 769px) {
+    .search-form {
+        flex-direction: row;
+        gap: 28px;
+    }
+
+    .main-page-form-row {
+        gap: 20px;
+    }
+
+    .button-group {
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1200px) {
+    .search-form {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

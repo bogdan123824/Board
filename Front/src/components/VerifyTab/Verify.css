@@ -1,0 +1,309 @@
+/* Verification Container */
+.verification-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Verification Form */
+.verification-form {
+    width: 100%;
+    max-width: 400px;
+    background-color: #0D0D0D;
+    padding: 28px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.verification-instructions {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.verification-label {
+    color: #F2F2F2;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.verification-label:last-of-type {
+    margin-bottom: 0;
+}
+
+/* File Input */
+.verification-upload-group {
+    margin-bottom: 20px;
+}
+
+.verification-file-input {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.verification-file-input:focus {
+    border-color: #D9A441;
+    box-shadow: 0 0 0 2px rgba(217, 164, 65, 0.2);
+    outline: none;
+}
+
+.verification-file-input::file-selector-button {
+    background-color: #D9A441;
+    color: #0D0D0D;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 12px;
+}
+
+/* Carousel */
+.verification-carousel-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.verification-carousel {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #333;
+}
+
+.verification-image-container {
+    width: 100%;
+    height: 250px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.verification-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.verification-carousel-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #D9A441;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.verification-carousel-arrow:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.verification-carousel-arrow.prev {
+    transform: scaleX(-1);
+    margin-left: 10px;
+}
+
+.verification-carousel-arrow.next {
+    margin-right: 10px;
+}
+
+/* Delete Button */
+.verification-delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+}
+
+.verification-delete-btn:hover {
+    background-color: #bb2d3b !important;
+    border-color: #b02a37 !important;
+}
+
+/* Alerts */
+.verification-alert {
+    margin-top: 16px;
+    border: none;
+    border-radius: 4px;
+}
+
+.verification-alert.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.verification-alert.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* Submit Button */
+.verification-submit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.verification-submit-btn {
+    height: 44px;
+    padding: 0 24px;
+    border-radius: 6px;
+    background: linear-gradient(to bottom, #d9a441 0%, #c6a974 50%, #cc8d18 100%);
+    border: none;
+    box-shadow: inset 2px 2px 5px #c78200,
+        inset -2px -2px 5px #ad7307;
+    color: #0D0D0D;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.verification-submit-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: inset 2px 2px 5px #c78200,
+        inset -2px -2px 5px #ad7307,
+        0 4px 8px rgba(217, 164, 65, 0.4);
+}
+
+.verification-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.verification-submit-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .verification-form {
+        padding: 24px;
+        max-width: 100%;
+    }
+
+    .verification-image-container {
+        height: 220px;
+    }
+
+    .verification-carousel-arrow {
+        width: 60px;
+        height: 60px;
+    }
+
+    .verification-carousel-arrow svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .verification-submit-btn {
+        height: 42px;
+        font-size: 15px;
+        min-width: 180px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    .verification-form {
+        padding: 20px;
+    }
+
+    .verification-label {
+        font-size: 13px;
+    }
+
+    .verification-image-container {
+        height: 200px;
+    }
+
+    .verification-carousel-arrow {
+        width: 60px;
+        height: 60px;
+    }
+
+    .verification-carousel-arrow svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .verification-delete-btn {
+        width: 28px;
+        height: 28px;
+        top: 8px;
+        right: 8px;
+    }
+
+    .verification-submit-btn {
+        height: 40px;
+        font-size: 14px;
+        min-width: 160px;
+        padding: 0 20px;
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 360px) {
+    .verification-form {
+        padding: 16px;
+    }
+
+    .verification-image-container {
+        height: 180px;
+    }
+
+    .verification-submit-btn {
+        min-width: 140px;
+        font-size: 13px;
+    }
+}
+
+/* Focus states for accessibility */
+.verification-file-input:focus,
+.verification-submit-btn:focus,
+.verification-delete-btn:focus {
+    outline: 2px solid #D9A441;
+    outline-offset: 2px;
+}
+
+/* Loading state animation */
+.verification-submit-btn:disabled:not(:empty) {
+    position: relative;
+}
+
+.verification-submit-btn:disabled:not(:empty)::after {
+    content: '';
+    animation: loadingDots 1.5s infinite;
+}
+
+/* Custom scrollbar for file input */
+.verification-file-input::-webkit-file-upload-button {
+    background-color: #D9A441;
+    color: #0D0D0D;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 12px;
+}
