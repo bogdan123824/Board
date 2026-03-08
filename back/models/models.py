@@ -3,6 +3,7 @@ from sqlalchemy.orm import relationship
 from datetime import datetime
 from enum import Enum, IntEnum
 from database import Base
+from models.models import User, Post
 
 class CurrencyEnum(str, Enum):
     UAH = "UAH"
